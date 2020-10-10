@@ -1,0 +1,14 @@
+.home {
+  position: relative;
+  z-index: 1;
+  -ms-overflow-style: none; // IE 10+
+  overflow: -moz-scrollbars-none; // Firefox
+
+  &::-webkit-scrollbar {
+    display: none; // Safari and Chrome
+  }
+
+  &--scroll-locked {
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,60 @@
+/**
+ * WordPress Generated Classes
+ * @see http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+ */
+
+/** Media alignment */
+.alignnone {
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+.aligncenter {
+  display: block;
+  margin: $spxs auto;
+  height: auto;
+}
+
+.alignleft,
+.alignright {
+  margin-bottom: $spxs;
+  height: auto;
+}
+
+@include breakpoints(sm) {
+  .alignleft {
+    float: left;
+    margin-right: $spxs;
+  }
+
+  .alignright {
+    float: right;
+    margin-left: $spxs;
+  }
+}
+
+.alignwide {
+  @include row--fullwidth;
+  max-width: 950px * 1.5;
+}
+
+.alignfull {
+  @include row--fullwidth;
+  max-width: 100vw;
+}
+
+/** Captions */
+.wp-caption {
+}
+
+.wp-caption img {
+}
+
+.wp-caption-text {
+}
+
+/** Text meant only for screen readers */
+.screen-reader-text {
+}

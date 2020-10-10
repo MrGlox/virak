@@ -1,0 +1,56 @@
+.socials {
+  $el: &;
+
+  display: flex;
+
+  #{$el}__item {
+    margin-left: gutter();
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  #{$el}__link {
+    position: relative;
+    display: block;
+    padding: 5px;
+    height: 40px;
+    width: 40px;
+    transition: transform .7s ease;
+
+    &:after {
+      @include pseudo__content;
+      position: absolute;
+      z-index: -1;
+      top: 50%; left: 50%;
+      background-color: $darkcolor;
+      height: 60px;
+      width: 60px;
+      border-radius: 30px;
+      opacity: 0;
+      transition: opacity .7s ease, transform .7s ease;
+      transform: translate(-50%, -50%) scale(0);
+    }
+
+    @include hover {
+      color: $lightcolor;
+      transform: translateY(-5px);
+
+      &:after {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+  }
+
+  #{$el}__icon {
+    height: 30px;
+    width: 30px;
+    transition: color .7s ease;
+
+    @include hover {
+      color: $lightcolor;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.footer {
+  $el: &;
+
+  #{$el}__container {
+    padding: $spxl 0;
+    width: span(11);
+    margin-left: span(1) + gutter();
+  }
+
+  #{$el}__title {
+    font-size: 60px;
+    font-weight: 200;
+    line-height: 85px;
+    margin-bottom: $spxl;
+    display: inline-block;
+
+    .words {
+      overflow: hidden;
+      position: relative;
+      display: inline-block;
+
+      &>span {
+        position: relative;
+        display: inline-block;
+        height: 74px;
+        margin-top: -6px;
+        margin-bottom: -6px;
+      }
+    }
+  }
+}

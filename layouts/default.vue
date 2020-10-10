@@ -1,7 +1,11 @@
 <template>
-  <div>
+  <main>
+    <header>
+      <Logo />
+    </header>
     <Nuxt />
-  </div>
+    <Pointer />
+  </main>
 </template>
 
 <style>

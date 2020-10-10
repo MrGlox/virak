@@ -1,0 +1,37 @@
+@mixin icon($filename, $insert: before, $extend: true) {
+  &:#{$insert} {
+    @if $extend {
+      @extend %icon;
+    }
+
+    @else {
+      @include icon-styles;
+    }
+
+    content: icon-char($filename);
+  }
+}
+
+.svg-sprite {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentColor;
+  height: 1em;
+  width: 1em;
+}
+
+//display hidden text for icon only button
+.no-svg {
+  .visuallyhidden {
+    position: static;
+    height: auto;
+    width: auto;
+  }
+}

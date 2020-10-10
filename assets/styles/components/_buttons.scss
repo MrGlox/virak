@@ -1,0 +1,202 @@
+/**
+ * Buttons
+ */
+
+@mixin button {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 8px 12px;
+  background-color: $maingrey;
+  border: 1px solid transparent;
+  color: $textcolor;
+  line-height: 1.5;
+  transition: color .7s ease, background-color .7s ease;
+
+  @include hover {
+    background-color: darken($maingrey, 10%);
+  }
+}
+
+// Sizing
+@mixin button--xs {
+  font-size: 9px;
+}
+
+@mixin button--sm {
+  font-size: 12px;
+}
+
+@mixin button--lg {
+  font-size: 18px;
+}
+
+@mixin button--expand {
+  display: block;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: center;
+}
+
+// Coloring
+@mixin button--colored($backgroundColor, $color) {
+  background-color: $backgroundColor;
+  color: $color;
+
+  @include hover {
+    background-color: darken($backgroundColor, 10%);
+  }
+}
+
+// Outline style
+@mixin button--outline($borderColor: $maingrey, $color: $textcolor) {
+  background-color: transparent;
+  border-color: $borderColor;
+  color: $color;
+
+  @include hover {
+    background-color: transparent;
+    border-color: darken($borderColor, 10%);
+  }
+}
+
+// Border Radius
+@mixin button--round {
+  border-radius: $br;
+}
+
+@mixin button--circle($size: 50px) {
+  padding: 0;
+  width: $size;
+  height: $size;
+  border-radius: $size;
+  line-height: $size;
+  text-align: center;
+}
+
+// State style
+@mixin button--disabled($backgroundColor: $maingrey) {
+  opacity: 0.3;
+  cursor: not-allowed;
+
+  @include hover {
+    background-color: $backgroundColor;
+  }
+}
+
+// Text style
+@mixin button--text {
+  padding: 0;
+  background-color: transparent;
+
+  @include hover {
+    background-color: transparent;
+  }
+}
+
+// Button icon
+@mixin button--icon {
+  padding: 10px 11px;
+}
+
+.button {
+  $parent: &;
+
+  @include button;
+
+  &--xs {
+    @include button--xs;
+  }
+
+  &--sm {
+    @include button--sm;
+  }
+
+  &--lg {
+    @include button--lg;
+  }
+
+  &--expand {
+    @include button--expand;
+  }
+
+  &--primary {
+    @include button--colored($primary, $textcolor);
+  }
+
+  &--error {
+    @include button--colored($error--second, $error);
+  }
+
+  &--warning {
+    @include button--colored($notice--second, $notice);
+  }
+
+  &--success {
+    @include button--colored($success--second, $success);
+  }
+
+  &--info {
+    @include button--colored($info--second, $info);
+  }
+
+  &--outline {
+    @include button--outline;
+
+    &#{$parent}--primary {
+      @include button--outline($primary, $textcolor);
+    }
+
+    &#{$parent}--error {
+      @include button--outline($error--second, $error);
+    }
+
+    &#{$parent}--warning {
+      @include button--outline($notice--second, $notice);
+    }
+
+    &#{$parent}--success {
+      @include button--outline($success--second, $success);
+    }
+
+    &#{$parent}--info {
+      @include button--outline($info--second, $info);
+    }
+  }
+
+  &--round {
+    @include button--round;
+  }
+
+  &--circle {
+    @include button--circle();
+  }
+
+  &--text {
+    @include button--text;
+  }
+
+  &--icon {
+    @include button--icon;
+  }
+
+  &[disabled] {
+    @include button--disabled;
+
+    &#{$parent}--error {
+      @include button--disabled($error--second);
+    }
+
+    &#{$parent}--warning {
+      @include button--disabled($notice--second);
+    }
+
+    &#{$parent}--success {
+      @include button--disabled($success--second);
+    }
+
+    &#{$parent}--info {
+      @include button--disabled($info--second);
+    }
+  }
+}

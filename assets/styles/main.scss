@@ -1,0 +1,47 @@
+/** Import npm dependencies */
+@import '~susy/sass/susy';
+
+/** Import root elements */
+@import 'root/config';
+
+/** Import root elements */
+@import 'common/normalize';
+@import 'common/mixins';
+@import 'common/variables';
+@import 'common/global';
+@import 'common/fonts';
+@import 'common/utilities';
+
+/** Import folders */
+@import 'components/animations';
+@import 'components/buttons';
+@import 'components/cards';
+@import 'components/comments';
+@import 'components/forms';
+@import 'components/icons';
+@import 'components/messages';
+@import 'components/seo';
+@import 'components/text';
+@import 'components/wp-classes';
+
+/** Import layouts */
+@import 'layouts/default';
+@import 'layouts/footer';
+@import 'layouts/header';
+@import 'layouts/pages';
+@import 'layouts/posts';
+@import 'layouts/sidebar';
+@import 'layouts/tinymce';
+
+/** Import patterns */
+@import 'patterns/lazyload';
+@import 'patterns/content';
+@import 'patterns/intro';
+@import 'patterns/project';
+@import 'patterns/slider';
+@import 'patterns/socials';
+
+/** Import pages */
+@import 'pages/home';
+@import 'pages/404';
+@import 'pages/print';

@@ -1,0 +1,81 @@
+// All inputs variables
+$text-inputs-list: 'input[type="color"]',
+  'input[type="date"]',
+  'input[type="datetime"]',
+  'input[type="datetime-local"]',
+  'input[type="email"]',
+  'input[type="month"]',
+  'input[type="number"]',
+  'input[type="password"]',
+  'input[type="search"]',
+  'input[type="tel"]',
+  'input[type="text"]',
+  'input[type="time"]',
+  'input[type="url"]',
+  'input[type="week"]',
+  'input:not([type])';
+
+$all-text-inputs: assign-inputs($text-inputs-list);
+
+#{$all-text-inputs},
+textarea {
+  box-sizing: border-box;
+  line-height: 1;
+  width: 100%;
+  border: 1px solid $maingrey;
+  padding: $spxs;
+  color: $textcolor;
+  background: darken($lightcolor, 5%);
+  border-radius: 0; //reset border radius for ios
+  transition: border-color 0.5s ease;
+  appearance: none;
+
+  @include placeholder {
+    color: lighten($textcolor, 50%);
+  }
+
+  &:hover {
+    border-color: darken($maingrey, 10%);
+  }
+
+  &:focus {
+    color: darken($textcolor, 10%);
+    border-color: darken($maingrey, 20%);
+  }
+}
+
+// Textarea
+textarea {
+  resize: vertical;
+}
+
+// Label
+label {
+  display: inline-block;
+  font-weight: 700;
+}
+
+// Custom select
+select {
+  @include select--custom;
+}
+
+// Checkbox + Radio
+.checkbox--custom {
+  @include checkbox--custom($primary);
+}
+
+.radio--custom {
+  @include checkbox--custom($primary);
+  @include radio--custom();
+}
+
+/** Search form */
+// .search-form {}
+
+.search-form label {
+  font-weight: normal;
+}
+
+// .search-form .search-field {}
+// .search-form .search-submit {}

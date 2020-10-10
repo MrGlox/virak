@@ -1,0 +1,97 @@
+/**
+ * Main colors
+ */
+$primary: #4614d6;
+$primary--saturated: #3cfafe;
+
+$second: #ff7e49;
+$second--lighter: #ff973d;
+$second--saturated: #ffc649;
+$second--darker: #f94f4f;
+
+$third: #eb2678;
+$third--saturated: #fc08f8;
+$third--darker: #994bf6;
+
+/**
+ * Light and Dark colors
+ */
+$lightcolor: #fafafa;
+$darkcolor: #161616;
+$textcolor: $darkcolor;
+
+/**
+ * Grey colors
+ */
+$maingrey: #797979;
+$darkgrey: #252525;
+$mediumgrey: #474748;
+$lightgrey: #e1e1e1;
+
+/**
+ * Contextual colors
+ */
+$error: #8a1f11;
+$error--second: #fbe3e4;
+
+$notice: #514721;
+$notice--second: #fff6bf;
+
+$success: #264409;
+$success--second: #e6efc2;
+
+$info: #205791;
+$info--second: #d5edf8;
+
+/**
+ * Positioning
+ */
+$zi: 1;
+
+/**
+ * Spacing
+ */
+$sp: 30px;
+
+$spxxxl: $sp * 6; // 180px
+$spxxl: $sp * 3; // 90px
+$spxl: $sp * 2; // 60px
+$spl: $sp/2 * 3; // 45px
+$sps: $sp * 2/3; // 20px
+$spxs: $sp/2; // 15px
+$spxxs: $sp/3; // 10px
+$spxxxs: $sp/6; // 5px
+
+/**
+ * Border
+ */
+$brdc: $lightgrey;
+$brd: 1px solid $brdc;
+
+/**
+ * Border Radius
+ */
+$br: 3px;
+$brl: 6px;
+
+/**
+ * Font Family
+ */
+$sans-serif: Arial, Helvetica, sans-serif;
+$serif: Times, Georgia, serif;
+
+$mainfont: Nunito, sans-serif;
+$subfont: Roboto, sans-serif;
+
+/**
+ * Font Size
+ */
+$fsz: 16px;
+$fszl: 18px;
+$hfsz: 25px;
+
+/**
+ * Line Height
+ */
+$lh: 1.625;
+$hlh: 1.2;
