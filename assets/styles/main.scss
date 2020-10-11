@@ -13,7 +13,6 @@
 @import 'common/utilities';
 
 /** Import folders */
-@import 'components/animations';
 @import 'components/buttons';
 @import 'components/cards';
 @import 'components/comments';
@@ -35,11 +34,7 @@
 
 /** Import patterns */
 @import 'patterns/lazyload';
-@import 'patterns/content';
 @import 'patterns/intro';
-@import 'patterns/project';
-@import 'patterns/slider';
-@import 'patterns/socials';
 
 /** Import pages */
 @import 'pages/home';
