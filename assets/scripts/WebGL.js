@@ -1,17 +1,18 @@
 import {
   AmbientLight,
+  Fog,
   Mesh,
   PerspectiveCamera,
   PlaneGeometry,
   Scene,
-  ShaderMaterial
+  ShaderMaterial,
 } from 'three'
 
 import createTouches from 'touches'
-import Renderer from '../core/Renderer'
 
-import Road from './Road'
-import CarLights from './CarLights'
+import Renderer from './renderer'
+
+import Tube from './tube'
 
 class WebGL {
   constructor({ $el, width, height, options }) {
@@ -24,8 +25,11 @@ class WebGL {
     this.maxDeltaTime = 1 / 30
 
     // eslint-disable-next-line
-    this.renderer = new Renderer(0x000000)
+    this.renderer = new Renderer(0x161616)
     this.scene = new Scene()
+
+    // eslint-disable-next-line
+    this.scene.fog = new Fog(0x333333, 10, 30)
 
     this.camera = new PerspectiveCamera(45, width / height, 0.1, 10000)
 
@@ -38,11 +42,10 @@ class WebGL {
     this.touchHandler = createTouches(window, {
       target: window,
       filtered: true,
-      preventSimulated: false
+      preventSimulated: false,
     })
 
-    this.road = new Road(this, options)
-    this.carLights = new CarLights(this, options)
+    this.tube = new Tube(this, options)
 
     this.initElements()
     this.createLights()
@@ -55,12 +58,11 @@ class WebGL {
   }
 
   initElements() {
-    this.camera.position.z = -4
+    this.camera.position.z = -100
     this.camera.position.y = 7
     this.camera.position.x = 0
 
-    this.road.init()
-    this.carLights.init()
+    this.tube.init()
   }
 
   createLights() {
@@ -119,7 +121,7 @@ class WebGL {
 
     this.traverse('onResize', {
       width: this.width,
-      height: this.height
+      height: this.height,
     })
   }
 }

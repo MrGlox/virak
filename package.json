@@ -21,12 +21,14 @@
     "charming": "^3.0.2",
     "core-js": "^3.6.5",
     "glslify": "^7.1.1",
+    "glslify-loader": "^2.0.0",
     "gsap": "^3.5.1",
     "lodash-es": "^4.17.15",
     "nuxt": "^2.14.5",
     "right-now": "^1.0.0",
     "susy": "^3.0.6",
     "three": "^0.121.1",
+    "touches": "^1.2.2",
     "vue-fragment": "^1.5.1"
   },
   "devDependencies": {
@@ -44,6 +46,7 @@
     "jest": "^26.4.2",
     "node-sass": "^4.14.1",
     "prettier": "^2.1.1",
+    "raw-loader": "^4.0.2",
     "sass-loader": "^10.0.3",
     "vue-jest": "^3.0.4"
   }

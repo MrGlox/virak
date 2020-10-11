@@ -34,7 +34,7 @@ export default {
   data() {
     return {
       multiplier: 5,
-      size: { width: 20, height: 20 },
+      size: { width: 8, height: 8 },
       mouse: { x: -100, y: -100 },
       pos: { x: -100, y: -100 },
       selectedElement: false,
@@ -107,19 +107,17 @@ export default {
 
 <style lang="scss" scoped>
 .pointer {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: #fff;
-  pointer-events: none;
-
+  &,
   &__offset {
     position: fixed;
     top: 0;
     left: 0;
     background-color: #fff;
-    opacity: 0.3;
     pointer-events: none;
+  }
+
+  &__offset {
+    opacity: 0.3;
   }
 }
 </style>

@@ -1,11 +1,14 @@
 <template>
   <main>
+    <WebGl />
     <header>
-      <Logo />
+      <div class="container">
+        <Logo />
+      </div>
     </header>
     <Nuxt />
     <Pointer />
-    <Loading />
+    <Loader />
   </main>
 </template>
 
@@ -27,5 +30,11 @@ html {
 *::after {
   box-sizing: border-box;
   margin: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
 }
 </style>

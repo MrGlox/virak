@@ -4,7 +4,7 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'virak',
+    title: 'Virak',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -13,7 +13,7 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
-  loading: '~/components/Loading.vue',
+  loading: '~/components/Loader.vue',
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   /*
@@ -30,7 +30,7 @@ export default {
     { src: '~/plugins/mouse', mode: 'client' },
     { src: '~/plugins/ticker', mode: 'client' },
     { src: '~/plugins/resize', mode: 'client' },
-    { src: '~/plugins/scroll', mode: 'client' },
+    // { src: '~/plugins/scroll', mode: 'client' },
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -75,7 +75,7 @@ export default {
       img: ({ isDev }) =>
         isDev ? '[path][name].[ext]' : 'img/[name]-[hash:7].[ext]',
     },
-    extend(config, { isDev, isClient }) {
+    extend(config, { isDev }) {
       // better debug
       if (isDev) {
         config.devtool = 'cheap-module-eval-source-map'

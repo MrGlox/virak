@@ -1,3 +1,3 @@
-import WebGL from './WebGL'
+import WebGL from './webgl'
 
 export default WebGL

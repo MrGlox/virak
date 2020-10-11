@@ -6,7 +6,7 @@ class Renderer extends WebGLRenderer {
     super({
       antialias: true,
       failIfMajorPerformanceCaveat: true,
-      powerPreference: 'high-performance'
+      powerPreference: 'high-performance',
     })
 
     // this.setPixelRatio(window.devicePixelRatio)

@@ -7,7 +7,7 @@
         class="overlay__move overlay__move--scroll-locked"
       >
         <div class="overlay__content">
-          <p>I'm Virak</p>
+          <p>Loading ...</p>
         </div>
       </div>
     </div>
